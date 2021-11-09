@@ -1,0 +1,151 @@
+$darkMode: black;
+$whiteMode: white;
+$mainFont: kanit,
+sans-serif;
+body {
+    background-color: $darkMode;
+    max-width: 100%;
+    margin: 0px;
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.siteContainer {
+    max-width: 75%;
+    padding-top: 30px;
+    max-height: 100vw;
+}
+
+.topBar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 30px;
+    font-family: $mainFont;
+    z-index: 100;
+    .nicoGarcia {
+        cursor: pointer;
+        display: flex;
+        width: 100px;
+        padding-left: 30px;
+        opacity: 0;
+        transition: 500ms;
+        img {
+            width: 100px;
+        }
+    }
+    .logo {
+        cursor: pointer;
+        display: flex;
+        width: 70px;
+        &:hover>.nicoGarcia {
+            opacity: 1;
+        }
+        img {
+            width: 70px;
+        }
+    }
+}
+
+.homeButton {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    margin-left: 89%;
+    a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.3rem;
+        border-bottom: 2px solid transparent;
+        transition: 500ms;
+        &:hover {
+            border-color: white
+        }
+    }
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.content {
+    position: relative;
+    z-index: 50;
+    overflow-y: scroll;
+    max-height: 710px;
+    div {
+        margin-bottom: 50px;
+    }
+}
+
+.bottomBar {
+    z-index: 100;
+    display: flex;
+    margin-bottom: 100px;
+    ul {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-right: 41px;
+        a {
+            text-decoration: none;
+            color: white;
+            font-family: $mainFont;
+            font-size: 1.3rem;
+            border-bottom: 2px solid transparent;
+            transition-duration: 500ms;
+            &:hover {
+                border-color: white
+            }
+        }
+    }
+}
+
+footer {
+    background-color: rgb(236, 74, 74);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        ul {
+            display: flex;
+            flex-direction: row;
+            a {
+                text-decoration: none;
+                color: black;
+                font-family: $mainFont;
+                font-size: 1.3rem;
+                padding-right: 40px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                transition-property: color;
+                transition-duration: 500ms;
+                &:hover {
+                    color: white;
+                }
+            }
+        }
+    }
+    .footer_content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .copyright {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+}
