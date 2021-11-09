@@ -131,12 +131,6 @@ footer {
     display: block;
     padding-top: 5px;
     padding-bottom: 5px;
-    @media (max-width: 1200px) {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-    }
     nav {
         display: flex;
         flex-direction: row;

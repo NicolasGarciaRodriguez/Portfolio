@@ -4,29 +4,59 @@ $mainFont: kanit,
 sans-serif;
 body {
     background-color: $darkMode;
-    max-width: 100%;
+    width: 100%;
     margin: 0px;
+    height: 100%;
+    @media (max-width: 1400px) {
+        width: 100vw;
+    }
 }
 
 .mainContainer {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    @media (max-width: 1400px) {
+        width: 100vw;
+    }
 }
 
 .siteContainer {
-    max-width: 75%;
+    height: 100%;
+    width: 75%;
     padding-top: 30px;
     max-height: 100vw;
+    @media (max-width: 1400px) {
+        width: 100vw;
+    }
 }
 
 .topBar {
+    max-width: 100%;
+    padding-right: 30px;
+    padding-left: 30px;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    margin-bottom: 30px;
+    justify-content: space-between;
+    padding-bottom: 30px;
     font-family: $mainFont;
-    z-index: 100;
+    .homeButton {
+        height: 20px;
+        padding-top: 20px;
+        a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.3rem;
+            border-bottom: 2px solid transparent;
+            transition: 500ms;
+            &:hover {
+                border-color: white
+            }
+        }
+    }
     .nicoGarcia {
         cursor: pointer;
         display: flex;
@@ -51,23 +81,6 @@ body {
     }
 }
 
-.homeButton {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    margin-left: 89%;
-    a {
-        text-decoration: none;
-        color: white;
-        font-size: 1.3rem;
-        border-bottom: 2px solid transparent;
-        transition: 500ms;
-        &:hover {
-            border-color: white
-        }
-    }
-}
-
 ::-webkit-scrollbar {
     display: none;
 }
@@ -78,14 +91,27 @@ body {
     overflow-y: scroll;
     max-height: 710px;
     div {
-        margin-bottom: 50px;
+        iframe {
+            width: 100%;
+            height: 715px;
+            @media (max-width: 830px) {
+                height: 500px;
+            }
+            @media (max-width: 630px) {
+                height: 300px;
+            }
+        }
     }
 }
 
 .bottomBar {
     z-index: 100;
     display: flex;
+    flex-direction: row;
     margin-bottom: 100px;
+    @media (max-width: 1400px) {
+        height: 40vw;
+    }
     ul {
         width: 100%;
         display: flex;
@@ -99,6 +125,9 @@ body {
             font-size: 1.3rem;
             border-bottom: 2px solid transparent;
             transition-duration: 500ms;
+            @media (max-width: 500px) {
+                font-size: 0.8rem;
+            }
             &:hover {
                 border-color: white
             }
@@ -114,6 +143,13 @@ footer {
     align-items: center;
     padding-top: 5px;
     padding-bottom: 5px;
+    @media (max-width: 1200px) {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        margin-top: 100px;
+    }
     nav {
         display: flex;
         flex-direction: row;

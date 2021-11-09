@@ -204,15 +204,6 @@ footer {
   padding-bottom: 5px;
 }
 
-@media (max-width: 1200px) {
-  footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-  }
-}
-
 footer nav {
   display: -webkit-box;
   display: -ms-flexbox;
